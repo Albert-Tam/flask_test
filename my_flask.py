@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 import pickle
 import sklearn
@@ -54,4 +55,8 @@ def house_price(file):
 
 
 if __name__ == '__main__':
-    app.run()
+    port = os.environ.get('PORT')
+    if port:
+        app.run(host='0.0.0.0', port=int(port))
+    else:
+        app.run()
