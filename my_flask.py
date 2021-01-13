@@ -8,8 +8,8 @@ import os
 
 app = Flask(__name__)
 
-testset_file = '/Users/alberttamman/PycharmProjects/flask_test/test_set.pkl'
-model_file = '/Users/alberttamman/PycharmProjects/flask_test/linear_reg_model.pkl'
+testset_file = 'test_set.pkl'
+model_file = 'linear_reg_model.pkl'
 MODEL = pickle.load(open(model_file, 'rb'))
 TEST_SET = pickle.load(open(testset_file, 'rb'))
 
