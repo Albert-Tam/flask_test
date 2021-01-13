@@ -14,6 +14,11 @@ MODEL = pickle.load(open(model_file, 'rb'))
 TEST_SET = pickle.load(open(testset_file, 'rb'))
 
 
+@app.route('/')
+def it_works():
+    return 'It works!'
+
+
 @app.route('/predict')
 def predict():
     CRIM = request.args.get('CRIM')
